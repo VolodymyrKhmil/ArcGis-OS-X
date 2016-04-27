@@ -15,7 +15,6 @@
 		4BD4171316B07404002E972B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4171116B07404002E972B /* Credits.rtf */; };
 		4BD4171616B07404002E972B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4171516B07404002E972B /* AppDelegate.m */; };
 		4BD4171916B07404002E972B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4171716B07404002E972B /* MainMenu.xib */; };
-		4BD4172216B07428002E972B /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BD4172116B07428002E972B /* ArcGIS.bundle */; };
 		4BD4172416B07466002E972B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD4172316B07466002E972B /* OpenGL.framework */; };
 		4BD4172616B0746B002E972B /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD4172516B0746B002E972B /* libc++.dylib */; };
 		4BD4172C16B07659002E972B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD4172B16B07659002E972B /* Security.framework */; };
@@ -24,6 +23,7 @@
 		DC9313BE1CC8CFD30029181E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9313BD1CC8CFD30029181E /* Storyboard.storyboard */; };
 		DC9313C21CC8DC8F0029181E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9313C01CC8DC8F0029181E /* MapViewController.m */; };
 		DC9313C31CC8DC8F0029181E /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9313C11CC8DC8F0029181E /* MapViewController.xib */; };
+		DCD2C0421CD11D1200F0BA53 /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DCD2C0411CD11D1200F0BA53 /* ArcGIS.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		4BD4171416B07404002E972B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BD4171516B07404002E972B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4BD4171816B07404002E972B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		4BD4172116B07428002E972B /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ArcGIS.bundle; path = ../../ArcGIS.framework/Versions/Current/Resources/ArcGIS.bundle; sourceTree = SOURCE_ROOT; };
 		4BD4172316B07466002E972B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		4BD4172516B0746B002E972B /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		4BD4172B16B07659002E972B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -52,6 +51,7 @@
 		DC9313BF1CC8DC8F0029181E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		DC9313C01CC8DC8F0029181E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		DC9313C11CC8DC8F0029181E /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		DCD2C0411CD11D1200F0BA53 /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ArcGIS.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		4BD416F316B07404002E972B = {
 			isa = PBXGroup;
 			children = (
-				4BD4172116B07428002E972B /* ArcGIS.bundle */,
+				DCD2C0411CD11D1200F0BA53 /* ArcGIS.bundle */,
 				4BD4170816B07404002E972B /* MapViewDemo */,
 				4BD4170116B07404002E972B /* Frameworks */,
 				4BD416FF16B07404002E972B /* Products */,
@@ -199,7 +199,7 @@
 				DC9313B91CC8CB9C0029181E /* zavd_new.geodatabase in Resources */,
 				4BD4171916B07404002E972B /* MainMenu.xib in Resources */,
 				DC9313C31CC8DC8F0029181E /* MapViewController.xib in Resources */,
-				4BD4172216B07428002E972B /* ArcGIS.bundle in Resources */,
+				DCD2C0421CD11D1200F0BA53 /* ArcGIS.bundle in Resources */,
 				DC9313BE1CC8CFD30029181E /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +306,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapViewDemo/MapViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "MapViewDemo/MapViewDemo-Info.plist";
@@ -323,6 +327,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapViewDemo/MapViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "MapViewDemo/MapViewDemo-Info.plist";
